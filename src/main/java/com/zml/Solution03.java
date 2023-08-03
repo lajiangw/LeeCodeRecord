@@ -49,4 +49,19 @@ public class Solution03 {
         }
         return res;
     }
+
+    public static int findRepeatNumber3(int[] nums) {
+        int i = 0;
+        while (i < nums.length) {
+//            如果成立，说明nums【i】在他该待的地方，也就是按顺序做。
+            if (i == nums[i]) {
+                i++;
+                continue;
+            }
+            if (nums[nums[i]] == nums[i]) return nums[i];
+            int temp = nums[i];
+
+        }
+        return 1;
+    }
 }
