@@ -3,6 +3,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.LongAdder;
 
 /**
  * @author ZhangMinlei
@@ -33,6 +36,11 @@ public class Test2 {
 
         Thread.sleep(3);
         list.forEach(System.out::println);
+        AtomicBoolean atomicBoolean = new AtomicBoolean(false);
+        atomicBoolean.compareAndSet(false, true);
+        AtomicInteger atomicInteger = new AtomicInteger(1);
+        atomicInteger.compareAndSet(1,2);
+
     }
 
     @Test
