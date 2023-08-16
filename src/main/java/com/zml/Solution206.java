@@ -12,7 +12,7 @@ public class Solution206 {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
-        reverseList(head);
+        reverseList2(head);
     }
 
     //
@@ -25,14 +25,28 @@ public class Solution206 {
 //            将下一个节点暂存到next
             ListNode next = curr.next;
 //            将当前处理的节点的下一个链表 给到 prev
+//            先把当前节点的next指向 上一节点 进行翻转
             curr.next = prev;
-//            当前处理的链表给到 prev
+//              把处理完的节点 给到上一个节点
             prev = curr;
 //            将暂存的下一个节点 给到curr
             curr = next;
         }
         return prev;
     }
+
+    public static ListNode reverseList2(ListNode head) {
+        ListNode p = null;
+        ListNode c = head;
+        while (c != null) {
+            ListNode t = c.next;
+            c.next = p;
+            p = c;
+            c = t;
+        }
+        return p;
+    }
+
 }
 
 
