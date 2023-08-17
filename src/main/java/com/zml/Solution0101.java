@@ -9,6 +9,7 @@ import java.util.HashSet;
  */
 public class Solution0101 {
 
+    //    因为只会出现26字母，创建一个数组记录出现次数， 再次遍历数组，如果出现大于等于2 说明重复
     public boolean isUnique(String astr) {
         if (astr == null) return true;
 
@@ -26,6 +27,7 @@ public class Solution0101 {
         return true;
     }
 
+    //    利用set 的不可重复性来解决问题
     public boolean isUnique2(String astr) {
         HashSet<Character> set = new HashSet<>();
         char[] charArray = astr.toCharArray();
