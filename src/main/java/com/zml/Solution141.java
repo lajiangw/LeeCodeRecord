@@ -6,10 +6,7 @@ package com.zml;
  * @date 2023-08-29 22:16
  */
 public class Solution141 {
-    public static void main(String[] args) {
 
-        new Solution141().hasCycle()
-    }
 
 
     //    这里使用的快慢指针的问题解决。。
