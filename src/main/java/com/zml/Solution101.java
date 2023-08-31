@@ -1,5 +1,7 @@
 package com.zml;
 
+import com.zml.bean.TreeNode;
+
 
 /**
  * @author ZhangMinlei
@@ -57,21 +59,4 @@ public class Solution101 {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
