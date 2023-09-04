@@ -15,6 +15,8 @@ public class Solution225 {
 }
 
 class MyStack {
+//    使用两个队列实现 队列的特性 先进先出
+//    栈则是 先进后出
     Queue<Integer> queue1;
     Queue<Integer> queue2;
 
@@ -49,6 +51,7 @@ class MyStack {
 }
 
 class MyStack2 {
+//    使用一个队列来实现
     Queue<Integer> queue;
 
     public MyStack2() {
@@ -58,6 +61,7 @@ class MyStack2 {
     public void push(int x) {
         int n = queue.size();
         queue.offer(x);
+//        将 新加入的元素 放到栈顶
         for (int i = 0; i < n; i++) {
             queue.offer(queue.poll());
         }
