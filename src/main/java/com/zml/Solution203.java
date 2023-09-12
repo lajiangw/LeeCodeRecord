@@ -19,6 +19,7 @@ public class Solution203 {
 
         ListNode listNode = head;
         while (listNode.next != null) {
+//            经过第一次循环的判断，就不需要担心头结点相等，直接对下个节点进行判断。
             if (listNode.next.val == val) {
                 listNode.next = listNode.next.next;
             } else {
@@ -29,7 +30,7 @@ public class Solution203 {
     }
 
     public ListNode removeElements2(ListNode head, int val) {
-
+// 使用迭代
         ListNode listNode = new ListNode(val - 1);
         listNode.next = head;
         ListNode prev = listNode;
