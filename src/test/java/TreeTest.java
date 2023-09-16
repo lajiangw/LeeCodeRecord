@@ -10,7 +10,6 @@ public class TreeTest {
 
 
     public void treeTest(TreeNode root) {
-//   遍历二叉树
 //        前序位置
         treeTest(root.left);
 //        中序位置
